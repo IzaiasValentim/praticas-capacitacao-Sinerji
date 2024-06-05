@@ -1,0 +1,65 @@
+Nomeclatura das classes:
+- Notação da primeira letra maiuscula: Pascal Case
+
+Organização base de um  programa em Java:
+- Main é a "porta de entrada" de um programa em java.
+- Um programa em java é organizado em sentenças de códigos que terminam com ';'.
+- Blocos de códigos são junções de sentenças de códigos e são delimitados por "{}".
+
+Comentrários:
+    - Apenas quando necessário.
+    - formas de comentar: "//", "/**/" e JavaDoc(/***/)
+
+Variáveis e Constantes:
+    - Declaração: <tipo> identificador = algum valor de inicialização;
+    - Uma variável constante pode ser criada: <final> <tipo> IDENTIFICADOR = valor;
+
+Interpretador do Java no terminal:
+    -  Comando: jshell
+
+Inferência de tipos:
+    - Com o uso de   <var> o tipo da variável pode ser identificado pelo  programa.
+    - A variável deve OBRIGATORIAMENTE ser iniciada na declaração.
+
+Tipos primitivos:
+    - Java possui 8 tipos primitivos.
+    - Numericos,6: Numeros inteiros: Byte(1 byte),short(2 bytes),Int(4 bytes), long(8bytes). Numeros reais: Float(4 bytes), Double(8 bytes).
+    - Não numericos:  Boolean(Padrão é falso), Char(Caractere).
+    - Literais padrões: numero inteior: int e ponto flutuante double.
+    - Tipos primitivos  não possuem acesso ao operador '.' que dispoinibiliza funçoes da classe.
+    - Cada tipo primitivo possui um Wrapper que é sua versão orientada a objeto com atributos e funcionalidades.
+
+Tipo não primitivo: String
+    -  Uma String é composta por um conjunto de caracteres(Char).
+    - É  tratada como um objeto e possui diversas funções  com o operador '.'
+    - Uma String é imutável, não é possível modificar o seu valor. Mas é possível substituição.
+    - <.charAt(valor)> -> Caractere de uma   posição da string.
+    - <.startWith("algo")> -> Verifica se a  sequencia "algo" está no inicio da String.
+    - <.toLowerCase(String)> -> Altera o valor da String para o anterior em caixa baixa.
+    - <.toUpperCase(String)> -> Altera o valor da String para o anterior em caixa alta.
+    - <.length()> -> Retorna a quantidade de chars da String.
+    - <.equals("Outra String")> -> Compara char a char  uma String com outra. True se foram iguais do inicio ao fim( Considera-se a caixa alta ou baixa).
+    - <.equalsIgnoreCase("Outra String")> - > Faz a  mesma comparação anterior, porém ignorando a caixa do caractere.
+    - <.contains("algo")> -> Retorna true se "qual" acontecer na String.
+
+Entrada e  saída de dados(Console):
+    Saída:
+        - <.print> -> Imprime no console mas não cria uma nova linha automaticamente.
+        - <.println> -> Imprime e cria uma nova linha ao final.
+        - <.printf> > -> Imprime uma String com formatação.
+    Entrada:
+        - Scanner - java.util
+        - Scanner entrada  = new Scanner(System.in);
+        - Entrada padrão é o teclado.
+        - É preciso encerrar o scanner no final do programa: entrada.close();
+        - entrada.nextLine(); -> Lê a próxima linha como String.
+        - entrada.nextInt(); -> Lê a próxima linha como um inteiro.
+        - Após receber um valor numerico, executar um entrada.nextLine() para limpar o  buffer.
+        - entrada pode receber diversos tipos de dados.
+
+Operadores:
+    - Unários, Binários e Ternários.
+    - Unário:  var++;
+    - Binário: var1+var2;
+    - Ternário: var1?var2:var3+1;
+    - Lógicos: &&, ||,!=, ^...
