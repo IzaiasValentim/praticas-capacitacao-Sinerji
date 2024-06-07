@@ -1,0 +1,22 @@
+Classes:
+    anatomia:
+        class Nome {
+            Desenvolvimento da classe com atributos(Dados) e comportamentos(Métodos).
+        }
+        -> A mais básica.
+
+    Classe vs Objeto:
+        -> Uma classe define um tipo/características de um personalizado de dados. Atende uma necessidade específica.
+        -> Uma classe representa uma abstração de algo. Como por exemplo uma classe feita para representar um produto
+        que abstrai suas caracterísitcas do mundo real.
+        -> Por meio de uma classe podemos instanciar objetos. Logo, um objeto é uma instância de uma classe.
+
+    Métodos:
+        -> Sâo funções específiacs a quais uma classe pode definir.
+        -> Anatomia básica: <tipo> nomeDoMetodo(<parametros>){...corpo do metodo...}
+        -> Construtor: Método especial que delimita a criação de uma instância de uma classe.
+            - NomeClasse classe = new NomeClasse();
+            - NomeClasse() é um construtor padrão. Também podemos definir outros explicitamente.
+            - Ausência do retorno
+            - Anatomia: NomeClasse(<parametros>){...}
+            - Deve ter o mesmo nome da classe.
