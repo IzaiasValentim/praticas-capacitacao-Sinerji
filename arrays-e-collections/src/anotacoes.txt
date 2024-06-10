@@ -1,0 +1,85 @@
+Array:
+    -> Armazena um conjunto de dados do mesmo tipo.
+    -> Estático vs Homogeneo.
+    -> Criação: <tipo> [] nome = new <tipo>[quantidade de elementos];
+    -> Em um array podem ser inseridas várias dimensões: double [][] matriz = new double[2][2], matriz 2x2
+    -> Inicialização de Array com conteudo int [] notas = {10,10,9};
+    -> Iteração com elementos de um array:
+        - foeach:
+            for(tipo var : nomeArray){<a cada interação um valor do array estará em var>}
+Collections:
+    - Collections é um framework que auxiliam o tratamento e representação de um conjunto de dados como uma
+    unica unidade.
+    - Não trabalham com tipos primitivos
+    - Set:
+        - Não ordenado por padrão.
+        - Não indexado.
+        - Não aceita repetição.
+        - Pode ser heterogeneo ou homogeneo
+    - List:
+        - Indexada/ordenada.
+        - Aceita repetição.
+        - Homogenea ou heterogenea.
+    Map:
+        - Estrutura chave-valor.
+        - Chave não aceita repetição(uma espécia de indíce).
+        - Valor aceita repetição.
+    Queue(fila):
+        - Implementação de uma fila.
+        - Fifo(Primeiro a tentrar, primeiro a sair.)
+    Stack(pilha):
+        - Implementção da pilha.
+        - Lifo(Ultimo a entrar, primeiro a sair)
+
+Set:
+    - Tipos: HashSet, TreeSet, LinkedHashSet.
+    - Heterogeneo: HashSet conjunto = new HashSet();
+    - Adicionar um elemento: conjunto.add(valor);
+    - Por ser heterogêneo aceita valores de qualquer tipo(Wrappers).
+    - conjunto.size() -> Retorna a quantidade de elementos.
+    - conjunto.remove("algo") -> remove a ocorrência do set.
+    - conjunto.contains("algo") -> verifica a ocorrência do argumento.
+    - O set pode ser criado para um contunto homogeneo: HashSet <tipo> nome = new HashSet<tipo>();
+    - O set anterior só aceitará a entrada de valor <tipo>
+
+List:
+    - Tipos: ArrayList, LinkedList.
+    - ArrayList <tipo> lista = new ArrayList<>();
+    - .add() -> Adiciona um elemento.
+    - .get(indice) -> retorna um elementos nesse indice.
+    - .remove(indice ou objeto) -> Remove da lista. No segundo caso retorna true o false a depender da exclusão.
+
+Queue(fila):
+    - Queue <tipo> nome = LinkedList<>(o tamanho pode ser informado aqui);
+    - .add(<elemento>) Adiciona um elemento. Se a fila estiver cheia, retornará uma exception.
+    - .offer(<elemento>) Adiciona um elemento. Se a fila estiver cheia, retorna false.
+    - .peek() Consulta o elmento no topo da lista. Se não houver nenhuma retorna null.
+    - .element() Consulta o elemento no topo da lista. Retorna exceção caso não tenha nenhum.
+    - .size() Tamanho da fila.
+    - .clear() Limpa a fila.
+    - .isEmpty() Se a fila está vazia.
+    - .poll() Acessa o proximo elemento da lista e o libera.
+    - .remove() Acessa o proximo elemento e o libera. Se não houver elemento gera exceção.
+
+Stack(pilha):
+    - Deque <tipo> nome = new ArrayDeque<tipo>();
+    - .add()->gerá exception caso cheia      .push()
+    - .peek() .element() mesma lógica da Queue.
+    - .pool() e .remove() Mesma lógica da Queue.
+    - .pop() Acessa e remove o próximo elemento. Caso não haja uma, gera exceção.
+
+Map:
+    - Map<tipoChave, tipoValores> nome = new HashMap<>();
+    - inserir elemento: .put(valorChave, valorValor); .put(k,v) insere o valor na chave ou o atualiza.
+    - .size() Quantidade de ocorrências.
+    - .isEmpty Se a estrutura está vazia.
+    - .keySet() -> Retorna todas as chaves de modo desordenado.
+    - .values() -> Retorna todos os valores.
+    - .entrySet() -> Retorna as ocorrência de <chave,valor>
+    - .containsKey(), .containsValue -> Verifica a ocorrência de uma Key ou Value informada no argumento.
+    - Utilização de um Map em foreach:
+        for(Entry<wrapperDaKey, wreapperDoValor> registro : nome.entrySet()){
+            // Percorre todas as ocorrência no map nome.
+        }
+
+
