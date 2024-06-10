@@ -1,0 +1,15 @@
+Reuso vs Composição:
+    - Composição: Um objeto é composto por outros objetos a depender da sua composição.
+    - Tipos de relacionamentos n para n(1 - 1, 1- n, n - n).
+    - Composição é sobre sair do contexto "ser" para o "usar".
+    - Um objeto usar outro objeto independemente da relação assiciativa entre eles.
+    - Reuso é uma consequência da realização da herança.
+    - Relação 1-1: Unidirecional
+Paradigmas: Procedural, Funcional, Orientação a Objetos(Java).
+
+Orientação a Objetos:
+    Pilares:
+        - Encapsulamento (Uma classe encapsula as características de um objeto.)
+        - Herança (Uma classe filha herda características de uma classe pai.)
+        - Polimorfismo (Especificação de tipos.)
+        - Abstração (Simplificar comportamentos do mundo real no software.)
