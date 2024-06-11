@@ -13,3 +13,29 @@ Orientação a Objetos:
         - Herança (Uma classe filha herda características de uma classe pai.)
         - Polimorfismo (Especificação de tipos.)
         - Abstração (Simplificar comportamentos do mundo real no software.)
+
+Modificadores de acesso:
+    - private -> Só consegue ter acesso membros da mesma classe
+    - default -> Só tem acesso os membros da mesma package.
+    - protected -> Só tem acesso os membros do mesmo pacote OU por meio da herança.
+    - public -> Acesso livre.
+
+Encapsulamento:
+    - Getters e Setters podem ser usador para implementar o encapsulamento.
+    - Getter permite o acesso controlado de um dado privado da classe.
+    - Setter permite a modificação controlada de um dado privado da classe.
+    - Padrões: Getter -> tipo <nomeDoatributo>Getter(){return this.nomeDoAtributo;}
+               Setter -> void <nomeDoAtribulo>Setter(Tipo nome){this.nomeDoAtributo = nome;}
+    - Geralmente as IDES conseguem criar automaticamente.
+
+Interfaces:
+    - Interfaces funcionam como uma assinatura.
+    - Em uma interface podem ser declarados métodos que devem ser aplicado por quem implementa aquela interface.
+    - Todos os métodos dentro uma interface são publicos e abstratos.(public abstract methodName(); estão implícitos.)
+    - Pode conter uma implementação default.
+
+Classe abstrata:
+    - Classe concreta vs abstrata.
+    - Classe concreta: Todos os métodos estão implementados, possuem corpo.
+    - Classe abstrata: Nem todos os métodos estão implementados, podem ser todos implementados ou apenas alguns.
+    - Classe abstrata não pode ser instanciada, apenas quem a herda pode ser instanciado.
