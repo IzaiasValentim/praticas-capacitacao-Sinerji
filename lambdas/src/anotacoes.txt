@@ -1,0 +1,16 @@
+Lambas:
+    - Criação de uma função anônimas.
+    - Detonata pelo operador "->";
+
+Interface funcional:
+    - Interface que suporta apenas um único método ABSTRATO.
+    - Marcada com a anotação @FunctionalInterface
+    - Esse tipo de interface ajuda a implementação de funções lambdas uma vez que não dá conflito entre as declarações
+    de métodos.
+    - Aceita a implementação default.
+    - Java já disponibiliza algumas interfaces funcionais padrões com alguns tipos de entrada e retorno.
+    - BinaryOperator <TipoWrapperDeSaida> nome = (x,y) -> x+y;
+    - Existem diversas interfaces que podem ser pesquisadas e utilizadas de acordo com os operadores e saídas aceitas.
+    - Algumas suportam tipos primitivos.
+    - Predicate<T> -> Aceita um parâmetro T e retorna verdadeiro ou falso de acordo com a lógica aplicada.
+    - Consumer<T> -> Aceita um parâmetro T e realiza uma operação de saída.
