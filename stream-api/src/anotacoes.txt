@@ -1,0 +1,44 @@
+Streams:
+    - Ajudam a manipular um conjunto de dados.
+    - Usam recrusos comuns na programação funcional.
+    - List, Iterator, Stream.
+    - Podem ser ordenadas ou não ordenadas.
+    - Sequencial ou não.
+    - Possibilidade de processamento paralelo.
+
+Grupos de operadores:
+    - Built ops(De construção)
+    - Intermedian ops(Intermediárias, de composição e encadeadas)
+    - Terminal ops(Retornam novas streams)
+
+Utilitários em Streams:
+    - Cria um conjunto de stream de um tipo Stream.of(...);
+    - Itera em um intervalo Stream.iterate(0, n)
+
+Interfaces funcionais:
+    - Essas interfaces podem ser utilizadas para potêncializar a eficácia do uso de Stream.
+
+    - Consumer<Tipo> :
+        - Apenas consome uma entrada e não há retorno.
+        - Ex: Consumer<String> algo = System.out::print;
+
+    - UnaryOperator<Tipo>:
+        - Recebe um tipo e retorna o mesmo tipo.
+        - Ex: UnaryOperator<Integer> dobro = numero -> numero*2;
+
+    - Function<tipoEntrada,tipoRetorno> algo:
+        - Recebe uma entrada de um tipo e retorna outro tipo.
+        - Ex: Function<String, Integer> binarioParaInt = s -> Integer.parseInt(s, 2);
+
+    - Predicate<Tipo>:
+        - Recebe um tipo e retorna um resultado booleano.
+        - Ex: Predicate<Aluno> aprovado = a-> a.nota >= 7;
+
+    - BinaryOperator<Tipo>:
+        - Aceita duas entradas e retorna um tipo informado.
+        - Ex: BinaryOperator<Integer> soma = (ac, n) -> ac+n;
+
+    - BiFunction<Entrada1, Entrada2, Retorno> nome:
+        - Representa uma função que aceita dois argumentos e produz um resultado.
+        - BiFunction<Pessoa, Double, Pessoa> guardarDinheiro =
+        (pessoa, salario) -> pessoa.poupanca.addDinherio(salario);
