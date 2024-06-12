@@ -1,0 +1,17 @@
+Tipos de erros:
+    - Erros de compilação: Impedem o processo natural de compilação de uma classe.
+    - Erros de tempo de execução(Exceções).
+    - Hierarquia das exceções: Throwable -> Error (Erros críticos, aplicação  para).
+    - Hierarquia das exceções : Thowable -> Exception(Podem ser tratadas e não para a aplicação)
+    - Pilha de execução, uma sequencia de métodos que são executados de modo que ao final de um,
+    outro inicia a execução.
+
+Exceções checadas ou não checadas:
+    - Checadas: Compilador verifica se o método declarou a ocorrência de uma exceção. Na assinatura do método
+    deve ter throws.
+    - Não checadas: O método não declara o lançamento de uma exceção.
+    - Qualquer classe que herda de RunTimeException é não chegada, não exigem tratamento.
+    - Qualquer classe que herde diretamente de Exception é obrigatório o tratamento da exceção.
+
+Alguns tipos de exceptions:
+    - IllegalArgumentException("") -> Não checada.
