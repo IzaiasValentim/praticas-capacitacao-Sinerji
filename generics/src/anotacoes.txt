@@ -1,0 +1,12 @@
+Generics:
+    - Fortalece a diminuição do uso de castings
+    - Permite a flexibilidade de reutilizar código mas com a segurança de lidar bem com os tipos.
+    - Uma classe que utilize Generics pode ser criada na seguinte anatomia:
+        - public class ArmazenaAlgo <T>{
+            * T(Ou qualquer outra letra, palavra) representa qualquer Objeto.
+            * Também pode ser um Wrapper do Java, como String, Integer,  Long...
+        }
+        Ao criar instâncias desta classe o tipo pode ser informado:
+            ->   ArmazenaAlgo<String> umNome=   new ArmazenaAlgo<>();
+                 * Se tiver um tipo específico definido, só será possível trabalhar com ele.
+
