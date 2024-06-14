@@ -1,0 +1,69 @@
+SQL:
+    - Linguagem de consulta estruturada.
+    - Possui Schema, consistência na persistência dos dados.
+    - Divisão em quatro partes: DML, DDL, DCL, TCL : 
+        DML - Data Manipulation Language : Operações de CRUD, mas entorno dos próprios dados.
+        DDL - Data Definition Language : Operações de definição do banco de dados.
+        DCL - Data Control Language: Constrole de acesso, permissões, administração e etc.
+        TCL - Transaction Control Language : Controle de transações, Estados e etc.  
+        
+Modelo Entidade x Relacionamento:
+    - Modelo do relacionamento do bando de dados relacional.
+    - Colunas representam as classes.
+    - Linha/Tupla são os dados propriamente dito de cada entidade.
+    - Chave primária (PK) é  única em uma tabela,  nào pode ser nula e não pode ser alterada.
+    - Outras colunas podem ter regras de não repetição, porém apenas 1 chave pirmária.
+    - Relacionamentos:
+        - Chave estrangeira(FK) -> Uma coluna cria relacionamento com outra tabela.
+        - 1 para 1
+        - 1 para Muitos
+        - Muitos para Muitos (Requer uma tabela intermediária para salvar a ocorrência entre os dois lados)
+
+Comandos:
+    - Criar tabela: 
+        - CREATE TABLE nomeTabela(coluna1, coluna2...)
+        - Declarar a chave primária:  PRIMARY KEY(nome da coluna)
+        - O valor da chave primária vai ser incrementada levando em conta o maior valor existente.
+        - Aplicados a colunas:
+            - Tipos: 
+                INT
+                VARCHAR(Tamanho)->Texto
+                Decimal(Tamanho, Precisão)
+            - Número sem sinal: UNSIGNED
+            - Não  pode ser nulo: NOT NULL
+            - O campo se auto-incrementar: AUTO_INCREMENT
+            - Coluna que aceita somente certos valores: ENUM('tipos','ssds')
+            - Não permitir repetição: UNIQUE KEY(nomeDoCampo)
+
+    - Inserir dados:
+        - Inserir: INSERT INTO nomeDaTabela (nomeDosCampos,...) VALUES (valoresParaCadaCampo,...);
+
+    - Consultar dados:
+        -  Mais básica possível: SELECT * FROM  nomeTabela; ->Não contém nenhum filtro
+        -  SELECT nomeDosCampos,... FROM nomeTabela;
+        - Podemos melhorar a visualização dos dados pesquisados adicionando o 'as' 
+          e o nome que irá  aparecer na tabela do resultado.  
+          *ex: SELECT  nome as  'Nome da Pessoa' FROM tabelaPessoas;
+        - Podemos adicionar condições com o WHERE.
+          *ex: SELECT idade FROM tabelaPessoas WHERE idade = 25;
+          - O resultado pode ser ordenado com order by nomeDoCampo
+          - desc faz ser decrescente.
+    
+    - Atualizar(UPDATE):
+        - LEMBRAR DO WHERE!!!!!!!
+        - UPDATE nomeTabela SET nomeCampo = novoValor ... WHERE id = numeroId;
+        - O WHERE faz com que a atualização não ocorra em toda a tabela.
+    
+    - Excluir(DELETE):
+        - LEMBRAR DO WHERE!!!!!!!
+        - DELETE FROM nomeTabela WHERE id=valor;
+
+    - Definir chave estrangeira FK:
+        - FOREIGN KEY (nomeDoCampo) REFERENCES nomeDaOutraTabela (nomeDoCampoNaOutraTabela)
+
+JOINS:
+    - Inner: O que estão em ambos os lados. Na interseção.
+    - Outer: O que é exclusivo de cada lado.
+    - Left join: Retorna o que pertence a ambos + ao lado esquerdo.
+    - Right Join: Retorna o que pertence a ambos + ao lado direito.
+    - Full Join: traz tudo entre os dois.
