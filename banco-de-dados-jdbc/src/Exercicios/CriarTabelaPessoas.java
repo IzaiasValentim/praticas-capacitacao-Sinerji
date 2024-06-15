@@ -16,6 +16,8 @@ public class CriarTabelaPessoas {
 		stmt.execute(sqlGeral);
 
 		System.out.println("Tabela criada com sucesso!");
+
+		stmt.close();
 		conexaoTabela.close();
 	}
 }
