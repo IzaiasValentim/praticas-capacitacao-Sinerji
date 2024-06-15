@@ -15,7 +15,6 @@ public class FabricaConexao {
 			String usuario = prop.getProperty("banco.usuario");
 			String senha = prop.getProperty("banco.senha");
 			
-			Connection conexao = DriverManager.getConnection(url, usuario, senha);
 			return DriverManager.getConnection(url, usuario, senha);
 		} catch (SQLException | IOException e) {
 			throw new RuntimeException(e);
