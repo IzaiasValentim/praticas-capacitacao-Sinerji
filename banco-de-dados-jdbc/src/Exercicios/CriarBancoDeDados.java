@@ -18,6 +18,7 @@ public class CriarBancoDeDados {
 		Statement stmt = conexao.createStatement();
 		stmt.execute("CREATE DATABASE IF NOT EXISTS curso_java");
 		
+		stmt.close();
 		conexao.close();
 	}
 }
