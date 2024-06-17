@@ -1,0 +1,47 @@
+Modularidade:
+	- Módulo é um grupo reutilizável, com pacotes relacionados e um descritor de módulo.
+	- Um módulo deve fornecer um descritor de módulo metadados que especificam as dependências do módulo, os pacotes que o módulo disponibiliza para outros módulos e muito mais.
+	
+	- O descritor de módulo, fornece:
+		- O nome do módulo
+		- As dependência do módulo(As quais ele depende)
+		- Os pacotes que ele disponibiliza explicitamente para outros módulos.
+		- Serviços que o módulo oferece.
+		- Serviços que ele consome.
+		- Reflexão.
+	- A aplicação dos módulos veio para lidar com os projetos monolíticos. de tamanho único.
+	- Modularizada no Java 9.
+	
+	- Benefícios:
+		- Configuração confiável
+		- Maior encapulamento
+		- Aplicações mais escaláveis e maior integridade
+		- Desempenho aprimorado
+
+Codando:
+	- Deve ser definido em um arquivo: module-info.java
+	- Declaracao em module-info.java: module moduleName{...}
+	- Dependência do modulo, Uma diretiva de módulo especifica que
+	  este módulo depende de outro:
+		- requires otherModule;
+		- requires static otherModule; //-> Dependência opicional.
+	
+	- Para especificar uma dependência em outro módulo e garantir
+      que outros módulos lendo seu módulo também leiam essa dependência:
+		- requires transitive otherModule;
+	
+	- Especifica um dos pacotes do módulo cujos tipos public (e seus tipos public e protected aninhados) deve ser acessível ao código em todos os outros módulos:
+		- exports algumaPackage;
+	
+	- Permite especificar em uma lista separada por vírgulas precisamente qual código do módulo ou dos módulos pode acessar o pacote exportado – isso é conhecido como exportação qualificada:
+		- exports to otherModule,...;
+	
+	- Especifica um serviço usado por este módulo—tornando o módulo um consumidor de serviço:
+		uses algo;
+	
+	- Especifica que um módulo fornece uma implementação de serviço – tornando o módulo um provedor de serviço:
+		- provides … with;
+		* A parte provides da diretiva especifica uma interface ou classe abstract listada na diretiva uses de um módulo e a parte with da diretiva especifica o nome da classe do provedor de serviço que implementa.
+	
+	- open, opens, and opens…to. Antes do Java 9, a reflexão podia ser usada para aprender sobre todos os tipos em um pacote e todos os membros de um tipo—até mesmo seus membros private – se quisesse permitir esse recurso ou não. Assim, nada foi realmente encapsulado.
+	
