@@ -25,7 +25,8 @@ public class ConversaoSalarios {
 
         double  media = (salarioUm + salarioDois + salarioTres) /3;
 
-        System.out.println("A média dos salários é: "+media);
+        // Saída da média salárial com duas casas decimais.
+        System.out.printf("A média dos salários é: %.2f", media);
         entradaSalario.close();
     }
 }

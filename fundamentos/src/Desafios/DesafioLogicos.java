@@ -11,9 +11,9 @@ public class DesafioLogicos {
         boolean tv32 = trabalhoTerca ^ trabalhoQuinta;
         boolean sorvete = trabalhoTerca || trabalhoQuinta;
 
-        System.out.println("Comprou Tv50: "+tv50);
-        System.out.println("Comprou Tv32: "+tv32);
-        System.out.println("Comprou sorvete: "+sorvete);
+        System.out.println("Comprou TV 50: " + tv50);
+        System.out.println("Comprou TV 32: " + tv32);
+        System.out.println("Tomou sorvete: " + sorvete);
 
     }
 }
