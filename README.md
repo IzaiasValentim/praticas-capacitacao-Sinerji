@@ -12,7 +12,7 @@ Este repositório contém:
 
 ## Estrutura do Repositório
 
-A estrutura do repositório é organizada de  modo em que cada pasta é relativa a uma seção do curso, logo:
+A estrutura do repositório é organizada de modo que cada pasta é relativa a um curso, logo dentro de cada uma poderá conter:
 
 - **/src/Desafios/** : Contém os desafios da seção.
 - **/src/Exercicios/**: Contém os exercícios da seção.
