@@ -2,8 +2,11 @@ import "./App.css";
 import OrderDeatils from "./components/OrderDetails";
 import Item from "./components/Item";
 
+import { useState } from 'react';
+
 function App() {
-    const items = [
+
+    const [items, setItems] = useState([
         {
             id: 1,
             photo: "real_madrid.webp",
@@ -85,9 +88,23 @@ function App() {
             quantity: 1,
             isInBag: false,
         },
-    ];
+    ]);
 
     const itemsInBag = items.filter(item => item.isInBag);
+
+    function selectHandler(id) {
+
+        let item = items.filter(item => item.id === id)[0];
+        item.isInBag = !item.isInBag;
+        {/*
+            A alteração dos itens só deve ser feita atraves de setItems.
+            Aqui o map percorre todos os items e verifica o id. Se forem iguais o item será atualizado.
+            Caso os id's não forem iguais, o elemento será repetido sem alteração.
+        */}
+
+        setItems(items.map(element => element.id == id ? item : element));
+    }
+
 
     return (
         <>
@@ -95,10 +112,10 @@ function App() {
                 <h4>Izaias Shop Made with React JS</h4>
                 {/* Este map realiza a rexibição de cada item*/}
                 {items.map((item) =>
-                    <Item  
-                        selectProduct={(id) => alert(`clicou: ${id}`)}
-                        item={item} 
-                        key={item.id} 
+                    <Item
+                        selectProduct={(id) => selectHandler(id)}
+                        item={item}
+                        key={item.id}
                     />
                 )};
             </section>
