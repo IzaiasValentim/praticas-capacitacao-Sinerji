@@ -120,7 +120,7 @@ function App() {
                 )};
             </section>
 
-            {itemsInBag.length > 0 && <OrderDeatils />}
+            {itemsInBag.length > 0 && <OrderDeatils itemsInBag={itemsInBag} />}
 
         </>
     );
