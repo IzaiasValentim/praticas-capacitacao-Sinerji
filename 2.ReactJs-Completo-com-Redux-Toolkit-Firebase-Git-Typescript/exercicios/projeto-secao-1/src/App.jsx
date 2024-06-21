@@ -86,6 +86,8 @@ function App() {
         },
     ];
 
+    const itemsInBag = items.filter(item => item.isInBag);
+
     return (
         <>
             <section className="items">
@@ -114,7 +116,9 @@ function App() {
                     </div>
                 )};
             </section>
-            <OrderDeatils/>
+
+            {itemsInBag.length > 0 && <OrderDeatils />}
+
         </>
     );
 }
