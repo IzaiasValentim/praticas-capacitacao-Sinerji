@@ -108,6 +108,7 @@ function App() {
     function quantityHandler(e, id, increment) {
         e.stopPropagation();
         let item = items.filter(item => item.id === id)[0];
+        {/*Incrementa ou decrementa a quantidade de itens de acordo com o valor de increment vindo do botâo + ou -.*/}
         item.quantity += increment;
 
         setItems(items.map(element => element.id === id ? item : element));
