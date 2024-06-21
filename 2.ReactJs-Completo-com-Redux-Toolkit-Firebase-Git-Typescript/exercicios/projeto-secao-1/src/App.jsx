@@ -95,7 +95,11 @@ function App() {
                 <h4>Izaias Shop Made with React JS</h4>
                 {/* Este map realiza a rexibição de cada item*/}
                 {items.map((item) =>
-                    <Item item={item} key={item.id} />
+                    <Item  
+                        selectProduct={(id) => alert(`clicou: ${id}`)}
+                        item={item} 
+                        key={item.id} 
+                    />
                 )};
             </section>
 
