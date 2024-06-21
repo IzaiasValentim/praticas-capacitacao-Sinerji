@@ -1,5 +1,6 @@
 import "./App.css";
 import OrderDeatils from "./components/OrderDetails";
+import Item from "./components/Item";
 
 function App() {
     const items = [
@@ -94,26 +95,7 @@ function App() {
                 <h4>Izaias Shop Made with React JS</h4>
                 {/* Este map realiza a rexibição de cada item*/}
                 {items.map((item) =>
-                    <div key={item.id} className={`product ${item.isInBag ? 'selected' : ''}`}>
-                        <div className="photo">
-                            <img src={"./img/" + item.photo} />
-                        </div>
-                        <div className="description">
-                            <span className="name">{item.name}</span>
-                            <span className="price">$ {item.price}</span>
-
-                            {/* Exibição condicional com o operador && */}
-
-                            {
-                                item.isInBag &&
-                                <div className="quantity-area">
-                                    <button>-</button>
-                                    <span className="quantity">{item.quantity}</span>
-                                    <button>+</button>
-                                </div>
-                            }
-                        </div>
-                    </div>
+                    <Item item={item} key={item.id} />
                 )};
             </section>
 
