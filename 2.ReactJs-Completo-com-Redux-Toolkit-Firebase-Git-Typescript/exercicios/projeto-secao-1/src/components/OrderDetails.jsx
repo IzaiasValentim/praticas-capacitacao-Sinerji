@@ -24,7 +24,7 @@ function OrderDeatils({ itemsInBag }) {
                                 <td>{item.quantity}x {item.name}</td>
                                 <td>$ {(item.quantity * item.price).toFixed(2)}</td>
                             </tr>
-                        )};
+                        )}
 
                         <tr>
                             <th>Total</th>

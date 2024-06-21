@@ -102,9 +102,16 @@ function App() {
             Caso os id's não forem iguais, o elemento será repetido sem alteração.
         */}
 
-        setItems(items.map(element => element.id == id ? item : element));
+        setItems(items.map(element => element.id === id ? item : element));
     }
 
+    function quantityHandler(e, id, increment) {
+        e.stopPropagation();
+        let item = items.filter(item => item.id === id)[0];
+        item.quantity += increment;
+
+        setItems(items.map(element => element.id === id ? item : element));
+    }
 
     return (
         <>
@@ -115,6 +122,7 @@ function App() {
                     <Item
                         selectProduct={(id) => selectHandler(id)}
                         item={item}
+                        changeQuantity={(e, id, increment) => quantityHandler(e, id, increment)}
                         key={item.id}
                     />
                 )};
