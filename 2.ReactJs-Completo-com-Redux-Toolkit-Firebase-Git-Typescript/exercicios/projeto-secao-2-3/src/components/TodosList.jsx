@@ -12,6 +12,25 @@ function TodosList() {
   // Definição do state para os todos.
   const [todos, setTodos] = useState(initialTodos);
 
+  function deleteHandler(id) {
+    if (confirm(' Tem certeza que desejas apagar a tareffa?')) {
+      setTodos(todos.filter(todo => todo.id !== id));
+    }
+  }
+
+  function toggleIsDoneHandler(id) {
+
+    setTodos(todos.map(todo => {
+      if (todo.id === id) {
+        todo.isDone = !todo.isDone;
+        return todo;
+      } else {
+        return todo;
+      }
+    }));
+
+  }
+
   return (
     /*
       Map itera todos os todos da lista e possibilita a construção de todos os componente Todo com as props(todo, key) enviadas.
@@ -23,6 +42,8 @@ function TodosList() {
 
           <Todo
             todo={todo}
+            deleteTodo={(id) => deleteHandler(id)}
+            toggleIsDone={(id) => toggleIsDoneHandler(id)}
             key={todo.id}
           />
 
