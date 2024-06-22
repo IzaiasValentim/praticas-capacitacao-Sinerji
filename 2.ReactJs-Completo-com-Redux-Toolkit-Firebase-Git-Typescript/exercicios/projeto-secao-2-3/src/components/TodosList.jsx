@@ -12,12 +12,14 @@ function TodosList() {
   // Definição do state para os todos.
   const [todos, setTodos] = useState(initialTodos);
 
+  // Função que deleta um todo pelo id.
   function deleteHandler(id) {
     if (confirm(' Tem certeza que desejas apagar a tareffa?')) {
       setTodos(todos.filter(todo => todo.id !== id));
     }
   }
 
+  // função que muda o valor lógico de isDone de um todo.
   function toggleIsDoneHandler(id) {
 
     setTodos(todos.map(todo => {
