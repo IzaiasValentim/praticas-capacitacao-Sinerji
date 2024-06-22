@@ -8,23 +8,23 @@ function TodosList() {
 
   // Função que deleta um todo pelo id.
   function deleteHandler(id) {
-    if (confirm(' Tem certeza que desejas apagar a tareffa?')) {
-      store.setTodos(store.todos.filter(todo => todo.id !== id));
-    }
+    store.dispatch(
+      {
+        type: 'deleted',
+        id: id
+      }
+    );
   }
 
   // função que muda o valor lógico de isDone de um todo.
   function toggleIsDoneHandler(id) {
 
-    store.setTodos(store.todos.map(todo => {
-      if (todo.id === id) {
-        todo.isDone = !todo.isDone;
-        return todo;
-      } else {
-        return todo;
+    store.dispatch(
+      {
+        type: 'toggledIsDone',
+        id: id
       }
-    }));
-
+    );
   }
 
   return (
