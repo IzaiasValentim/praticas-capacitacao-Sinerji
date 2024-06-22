@@ -4,7 +4,7 @@ import {useTodos} from '../../TodosContext.jsx';
 function ModalCloseButton() {
 
     const store = useTodos();
-
+    // store.setModalIsActive(false) -> Fecha a janela de adicionar nota tarefa.
     return (
     <>
             <button onClick={()=>{store.setModalIsActive(false)}} className="close-btn">

@@ -1,4 +1,4 @@
-import { createContext, useReducer, useContext} from "react";
+import { createContext, useReducer, useContext, useState } from "react";
 export const TodosContext = createContext("");
 
 // Array com alguns todos base.
@@ -13,10 +13,12 @@ export function TodosProvider({ children }) {
     // Definição do state para os todos.
     const [todos, dispatch] = useReducer(todosReducer, initialTodos);
 
+    const [modalIsActive, setModalIsActive] = useState(false);
+
     return (
         <>
             <main>
-                <TodosContext.Provider value={{ todos, dispatch }}>
+                <TodosContext.Provider value={{ todos, dispatch, modalIsActive, setModalIsActive }}>
                     {children}
                 </TodosContext.Provider>
             </main>
@@ -31,7 +33,7 @@ export function useTodos() {
 export default function todosReducer(todos, action) {
 
     switch (action.type) {
-
+        // Deleta um todo da lista de todos.
         case 'deleted': {
             if (confirm('Are you sure you want to delete the to-do?')) {
                 return todos.filter(todo => todo.id !== action.id);
@@ -39,6 +41,7 @@ export default function todosReducer(todos, action) {
                 return todos;
             }
         }
+        // Marca ou desmarca uma tarefa da lista como isDone.
         case 'toggledIsDone': {
             return (todos.map(todo => {
                 if (todo.id === action.id) {
@@ -49,5 +52,13 @@ export default function todosReducer(todos, action) {
                 }
             }));
         }
+
+        // Realiza a adição de uma nova tarefa a lista de todos. É realizada     a definição de um novo id. 
+        case 'added': {
+            let newTodo = action.newTodo;
+            newTodo.id = todos.length ? Math.max(...todos.map(todo => todo.id)) + 1 : 1;
+            return [...todos, newTodo];
+        }
+
     }
 }
