@@ -1,12 +1,10 @@
-import { createContext, useReducer, useContext, useState } from "react";
+import { createContext, useReducer, useContext, useState, useEffect} from "react";
 export const TodosContext = createContext("");
 
-// Array com alguns todos base.
-const initialTodos = [
-    { id: 0, title: 'Do Groceries', description: 'Buy apples, rice, juice and toilet paper.', isDone: true },
-    { id: 1, title: 'Study React', description: 'Understand context & reducers.', isDone: false },
-    { id: 2, title: 'Learn Redux', description: 'Learn state management with Redux', isDone: false }
-];
+// Array inicial com os todos armazenados no localStorage.
+const initialTodos = localStorage.getItem('todos') ? 
+    JSON.parse(localStorage.getItem('todos')) 
+    : [];
 
 export function TodosProvider({ children }) {
 
@@ -17,8 +15,8 @@ export function TodosProvider({ children }) {
 
     const [filterBy, setFilterBy] = useState('');
 
-    function filteredTodos(){
-        switch(filterBy){
+    function filteredTodos() {
+        switch (filterBy) {
             case 'todo':
                 return todos.filter(todo => !todo.isDone);
             case 'done':
@@ -27,6 +25,10 @@ export function TodosProvider({ children }) {
                 return todos;
         }
     }
+
+    useEffect(() => {
+        localStorage.setItem('todos', JSON.stringify(todos))
+    }, [todos]);
 
     return (
         <>
