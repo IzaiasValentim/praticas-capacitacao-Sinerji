@@ -1,9 +1,9 @@
 import './Header.scss';
 import { useTodos } from '../TodosContext.jsx';
 
-
-
-
+/* Função que define um componente Header, o botão que possibilita a chamada do formulário 
+   para adicionar uma nova tarefa.
+*/
 function Header({ appName }) {
 
     const store = useTodos();

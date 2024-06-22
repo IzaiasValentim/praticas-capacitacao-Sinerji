@@ -1,6 +1,7 @@
 import './Todo.scss';
 import { useTodos } from '../TodosContext';
 
+// Função de define um componente Todo, uma tarefa que estará na lista de todos.
 function Todo({ todo }) {
 
     const store = useTodos();

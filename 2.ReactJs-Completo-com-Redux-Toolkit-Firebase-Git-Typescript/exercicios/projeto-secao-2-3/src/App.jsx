@@ -4,7 +4,6 @@ import './App.scss';
 import { TodosProvider } from './TodosContext.jsx';
 
 function App() {
-
   return (
     <>
       <main>

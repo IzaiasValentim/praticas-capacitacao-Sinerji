@@ -1,13 +1,15 @@
 import { useTodos } from '../TodosContext.jsx';
 import Todo from './Todo.jsx';
 
+// Função que define o componente que aglomera a lista de Todos.
 function TodosList() {
   // Definição do state para os todos.
   const store = useTodos();
 
   return (
     /*
-      Map itera todos os todos da lista e possibilita a construção de todos os componente Todo com as props(todo, key) enviadas.
+      Map itera todos os todos da lista e possibilita a construção de todos os componentes relativo a um Todo
+      com as props(todo, key) enviadas.
     */
     <>
       <div className="todos">
