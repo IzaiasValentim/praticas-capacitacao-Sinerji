@@ -12,15 +12,16 @@ function TodosList() {
     <>
       <div className="todos">
 
-        {store.todos.map(todo =>
+        {store.filteredTodos().length ? store.filteredTodos().map(todo =>
 
           <Todo
             todo={todo}
             key={todo.id}
           />
 
-        )}
-
+        ) :
+          <p>Nenhuma tarefa a ser apresentada :c</p>
+        }
       </div>
     </>
   )

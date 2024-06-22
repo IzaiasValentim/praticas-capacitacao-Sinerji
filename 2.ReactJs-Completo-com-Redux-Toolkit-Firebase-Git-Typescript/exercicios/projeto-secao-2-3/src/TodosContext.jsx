@@ -15,10 +15,29 @@ export function TodosProvider({ children }) {
 
     const [modalIsActive, setModalIsActive] = useState(false);
 
+    const [filterBy, setFilterBy] = useState('');
+
+    function filteredTodos(){
+        switch(filterBy){
+            case 'todo':
+                return todos.filter(todo => !todo.isDone);
+            case 'done':
+                return todos.filter(todo => todo.isDone);
+            default:
+                return todos;
+        }
+    }
+
     return (
         <>
             <main>
-                <TodosContext.Provider value={{ todos, dispatch, modalIsActive, setModalIsActive }}>
+                <TodosContext.Provider value={
+                    {
+                        todos, dispatch,
+                        modalIsActive, setModalIsActive,
+                        filterBy, setFilterBy, filteredTodos
+                    }
+                }>
                     {children}
                 </TodosContext.Provider>
             </main>
