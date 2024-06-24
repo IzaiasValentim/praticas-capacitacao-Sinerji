@@ -1,0 +1,13 @@
+Store.js
+    -> É o arquivo central para o gerênciamento de estados da aplicação.
+    -> Nele é possível adicionar e organizar novas camadas 'slices'.
+
+Slices
+    -> Cada arquivo de slice individual é responsável pela implementação do controle de estado de um componente.
+    -> Ainda no arquivo terá os reducers com as funcionalidades implementadas.
+    -> Em bookSlice:
+        - Foram feitos os reducers para adicinar, excluir e modificar o estado de leitura do livro.
+    
+    -> Em notesSlice:
+        - Foram feitos os reducers para adicionar uma nota, excluir uma nota ou excluir todas as notas ligadas 
+          a um livro quando for solicitada a exclusão do livro.

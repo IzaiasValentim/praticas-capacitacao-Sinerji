@@ -1,0 +1,17 @@
+  Comandos de instalação:
+    - instalar react-router-dom:> npm i react-router-dom 
+    - redux toolkit:> npm install @reduxjs/toolkit
+    - redux - redux:> npm install react-redux
+
+  infos:
+    Estrutura do Router:
+    <BrowserRouter>
+        <Routes>
+            <Route path="algum-path" element={<AddBookPage />}/> 
+        </Routes>
+    </BrowserRouter>  
+    Ps:   Em <Route/> é definido cada componente que será exibido.
+          -> element={} identifica o componente da rota
+          -> path={} indica o endereco na url.
+          -> index indica a pagina home `/`
+          -> Informações podem ser passadas pelo path.
