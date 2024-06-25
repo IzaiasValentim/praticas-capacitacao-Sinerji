@@ -1,0 +1,21 @@
+/*
+    Neste arquivo ficam as configurações do compilador.
+        - target: Versão desejada do JavaScript.
+        - rootDir: Localização dos arquivos  de desenvolvimento.
+        - outDir: Localização dos arquivos finais(Após a compilação de .ts para .js) 
+        - strictNullChecks: Habilita ou desabilita a checagem de valores null ou undefined. Se estiver habilitada
+          sempre que um campo tiver a possibilidade de ser null|undefined, deverá ter alguma lógica de validação.
+        - noImplicitAny: Impede a inferência do tipo any em funções. Em váriáveis não ocorre a verificação!
+          compilar:>tsc
+    executar: node <endereco index.js> neste projeto: node dist/index.js
+*/
+
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "rootDir": "./src",
+        "outDir": "./dist",
+        "strictNullChecks": true,
+        "noImplicitAny": true
+    }
+}
