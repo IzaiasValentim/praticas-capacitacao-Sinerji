@@ -1,0 +1,3 @@
+Usuario teste:
+    testeSinergi@email.com
+    testeS01@
