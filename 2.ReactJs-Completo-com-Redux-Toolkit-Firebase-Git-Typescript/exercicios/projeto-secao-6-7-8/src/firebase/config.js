@@ -3,12 +3,12 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB0QCfNHPPO0mNvlEG0ct2AgAV-HwUn420",
+  apiKey: "--------------------------",
   authDomain: "lista-de-leitura-izaias.firebaseapp.com",
   projectId: "lista-de-leitura-izaias",
   storageBucket: "lista-de-leitura-izaias.appspot.com",
-  messagingSenderId: "828795397625",
-  appId: "1:828795397625:web:b3126a35ae8400b562c928"
+  messagingSenderId: "------",
+  appId: "-----------------------------"
 };
 
 const app = initializeApp(firebaseConfig);
