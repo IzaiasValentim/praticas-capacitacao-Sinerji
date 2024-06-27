@@ -11,7 +11,7 @@ import com.izaiasvalentim.projeto_security_jwt.domain.repositories.UsuarioReposi
 
 @SpringBootApplication
 public class ProjetoSecurityJwtApplication {
-	// No momento os clientes são criados no CommandLineRunner
+	// O cadastro dos usuários base para teste são realizados no CommandLineRunner.
 	@Bean
 	public CommandLineRunner init(@Autowired UsuarioRepository usuarioRepository) {
 		return args -> {
