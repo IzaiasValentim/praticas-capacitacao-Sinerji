@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "33b83c4d-13b2-420a-9092-3165cb4d7148",
+		"name": "projeto-security-jwt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26278251"
+	},
+	"item": [
+		{
+			"name": "Rotas de teste de acesso",
+			"item": [
+				{
+					"name": "/home/say-hello-secured",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0ZUFkbWluIiwiZXhwIjoxNzE5NTEyNTg2fQ.HArVIX35S1LXFAR92sH1eoLva-fnVCMJdpXn75uY5eVwzk6bN1y71Ri5sKyA4Js7XYejZAmhpLaffqjl-tDbbQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8081/home/say-hello-secured",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"home",
+								"say-hello-secured"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/home/say-hello-free",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0ZVNpbmVyamkiLCJleHAiOjE3MTk1MTI1NDF9.N5YPyaUPS1G1-jyEu4NtaOejDCBsXAMfSYBA92JI3lx-pQaeY27hvYPVsOuKWLKcAOm-uAkh3rK9NRWDTQcpXA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8081/home/say-hello-free",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"home",
+								"say-hello-free"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuários",
+			"item": [
+				{
+					"name": "/home/usuarios/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"login\" : \"testeSinerji\",\r\n    \"senha\" : \"teste\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/home/usuarios/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"home",
+								"usuarios",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "token-jwt",
+			"item": [
+				{
+					"name": "/home/usuarios/auth-token/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"login\" : \"testeAdmin\",\r\n    \"senha\" : \"testeadmin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/home/usuarios/auth-token/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"home",
+								"usuarios",
+								"auth-token",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
