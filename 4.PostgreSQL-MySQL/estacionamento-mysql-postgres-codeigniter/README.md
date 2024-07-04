@@ -1,3 +1,7 @@
+# Importante:
+
+- Na pasta demo-conexao-mysql-postgresql/ há fotos demonstrativas da conexão com o MySQL e PostgreSQL e da realização das migrações.
+
 # CodeIgniter 4 Application Starter
 
 ## What is CodeIgniter?
