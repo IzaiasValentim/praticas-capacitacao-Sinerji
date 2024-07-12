@@ -1,5 +1,5 @@
 // Modelo de arquivo com a chave de authenticação.
 
 module.exports ={
-    authSecret: ''
+    authSecret: ' '
 }
