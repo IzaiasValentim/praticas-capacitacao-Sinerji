@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "4d077c60-36d3-46de-893d-9c419d90e1e3",
+		"name": "tasks-backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26278251"
+	},
+	"item": [
+		{
+			"name": "tasks",
+			"item": [
+				{
+					"name": "/tasks",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAsIm5hbWUiOiJ0ZXN0ZXBvc3RtYW4iLCJlbWFpbCI6InBvc3RhbUBnbWFpbC5jb20ifQ.kKqoa2pGEmTfDtmb3OCz2Ey69-Fs-dS7Ld7VaeA-hqQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/tasks/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAsIm5hbWUiOiJ0ZXN0ZXBvc3RtYW4iLCJlbWFpbCI6InBvc3RhbUBnbWFpbC5jb20ifQ.kKqoa2pGEmTfDtmb3OCz2Ey69-Fs-dS7Ld7VaeA-hqQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/tasks/15",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks",
+								"15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/tasks/:id/toggle",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAsIm5hbWUiOiJ0ZXN0ZXBvc3RtYW4iLCJlbWFpbCI6InBvc3RhbUBnbWFpbC5jb20ifQ.kKqoa2pGEmTfDtmb3OCz2Ey69-Fs-dS7Ld7VaeA-hqQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/tasks/14/toggle",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks",
+								"14",
+								"toggle"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/tasks",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTAsIm5hbWUiOiJ0ZXN0ZXBvc3RtYW4iLCJlbWFpbCI6InBvc3RhbUBnbWFpbC5jb20ifQ.kKqoa2pGEmTfDtmb3OCz2Ey69-Fs-dS7Ld7VaeA-hqQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"desc\":\"Task teste exclusão\",\r\n\t\"estimateAt\":\"2024-07-12\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "/signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"name\":\"testepostman\",\r\n\t\"email\":\"postam@gmail.com\",\r\n\t\"password\":\"izaias123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"email\":\"postam@gmail.com\",\r\n\t\"password\":\"izaias123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"signin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
