@@ -1,6 +1,6 @@
 # Capacitação Geral - Sinerji
 
-Este repositório tem o objetivo de compartilhar o progresso, os materiais de estudo e os projetos desenvolvidos durante o curso de capacitação.
+Este repositório tem o objetivo de compartilhar o progresso, os materiais de estudo e os projetos desenvolvidos durante os cursos de capacitação.
 
 ## Visão Geral
 
