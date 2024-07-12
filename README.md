@@ -1,4 +1,4 @@
-# Capacitação em Java - Sinerji
+# Capacitação Geral - Sinerji
 
 Este repositório tem o objetivo de compartilhar o progresso, os materiais de estudo e os projetos desenvolvidos durante o curso de capacitação.
 
@@ -14,7 +14,8 @@ Este repositório contém:
 
 A estrutura do repositório é organizada de modo que cada pasta é relativa a um curso, logo dentro de cada uma poderá conter:
 
-- **/src/Desafios/** : Contém os desafios da seção.
-- **/src/Exercicios/**: Contém os exercícios da seção.
-- **/src/anotações.txt** : Contém minhas anotações da seção.
+- **/Desafios/** : Contém os desafios da seção.
+- **/Exercicios/**: Contém os exercícios da seção.
+- **/anotações.txt** : Contém minhas anotações da seção.
+- **/Projeto/**: Contém projeto(s) realizado(s) no curso.
 - *Algumas seções não contém desafios ou lista de exercícios.
